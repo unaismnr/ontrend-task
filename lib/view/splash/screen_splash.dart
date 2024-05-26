@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ontrend_task/presentation/screen_login.dart';
+import 'package:ontrend_task/view/login/screen_login.dart';
 
 class ScreenSplash extends StatefulWidget {
   const ScreenSplash({super.key});
@@ -29,21 +29,23 @@ class _ScreenSplashState extends State<ScreenSplash> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.35,
-              width: MediaQuery.of(context).size.height * 0.35,
-              child: Image.asset(
-                'assets/log-ontrend.png',
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.35,
+                width: MediaQuery.of(context).size.height * 0.35,
+                child: Image.asset(
+                  'assets/log-ontrend.png',
+                ),
               ),
             ),
-          ),
-          const Text('100% Safe & Secure'),
-        ],
+            const Text('100% Safe & Secure'),
+          ],
+        ),
       ),
     );
   }

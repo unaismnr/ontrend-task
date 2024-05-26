@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ontrend_task/utils/color_consts.dart';
 
-import 'presentation/screen_splash.dart';
+import 'view/splash/screen_splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'OnTrend Task',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.transparent,
+        ),
+        scaffoldBackgroundColor: kWhiteColor,
         useMaterial3: false,
+        textTheme: GoogleFonts.latoTextTheme(),
       ),
       home: const ScreenSplash(),
       debugShowCheckedModeBanner: false,
