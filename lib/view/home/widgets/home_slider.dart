@@ -14,28 +14,33 @@ class HomeSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider(
-        items: images.map((e) {
-          return Builder(builder: (context) {
-            return Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                  image: NetworkImage(e),
-                  fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
+      child: CarouselSlider(
+          items: images.map((e) {
+            return Builder(builder: (context) {
+              return Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: NetworkImage(e),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-            );
-          });
-        }).toList(),
-        options: CarouselOptions(
-          height: MediaQuery.of(context).size.height * 0.18,
-          autoPlay: true,
-          autoPlayInterval: const Duration(seconds: 4),
-          enlargeCenterPage: true,
-          viewportFraction: 1.0,
-          aspectRatio: 2.0,
-          initialPage: 0,
-        ));
+              );
+            });
+          }).toList(),
+          options: CarouselOptions(
+            height: MediaQuery.of(context).size.height * 0.18,
+            autoPlay: true,
+            autoPlayInterval: const Duration(seconds: 4),
+            enlargeCenterPage: true,
+            viewportFraction: 1.0,
+            aspectRatio: 2.0,
+            initialPage: 0,
+          )),
+    );
   }
 }

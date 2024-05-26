@@ -69,7 +69,7 @@ class ScreenLogin extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ScreenHome(),
+                              builder: (context) => const ScreenHome(),
                             ));
                       },
                       style: ElevatedButton.styleFrom(
@@ -107,7 +107,7 @@ class ScreenLogin extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ScreenHome(),
+                              builder: (context) => const ScreenHome(),
                             ));
                       },
                       child: const Text(

@@ -8,49 +8,55 @@ class HomeCustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
-          Icons.location_on_outlined,
-          color: kMainColor,
-          size: 25,
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.01,
-        ),
-        const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Janub Ad Dahariz',
-              style: TextStyle(
-                fontSize: 15,
-                color: kBlackColor,
-                fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
+      child: Row(
+        children: [
+          const Icon(
+            Icons.location_on_outlined,
+            color: kMainColor,
+            size: 25,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.01,
+          ),
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Janub Ad Dahariz',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: kBlackColor,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Text(
-              'Salalah, Oman',
-              style: TextStyle(
-                color: kBlueColor,
+              Text(
+                'Salalah, Oman',
+                style: TextStyle(
+                  color: kBlueColor,
+                ),
               ),
-            ),
-          ],
-        ),
-        const Spacer(),
-        HomeAppBarIcons(
-          icon: Icons.favorite_border,
-          onTap: () {},
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.02,
-        ),
-        HomeAppBarIcons(
-          icon: Icons.notifications_none,
-          onTap: () {},
-        ),
-      ],
+            ],
+          ),
+          const Spacer(),
+          HomeAppBarIcons(
+            icon: Icons.favorite_border,
+            onTap: () {},
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.03,
+          ),
+          HomeAppBarIcons(
+            icon: Icons.notifications_none,
+            onTap: () {},
+          ),
+        ],
+      ),
     );
   }
 }
