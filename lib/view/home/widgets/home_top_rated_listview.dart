@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ontrend_task/utils/color_consts.dart';
+import 'package:ontrend_task/view/home/common/rating_widget.dart';
 
 class HomeTopRatedListView extends StatelessWidget {
   const HomeTopRatedListView({super.key});
@@ -46,13 +47,13 @@ class HomeTopRatedListView extends StatelessWidget {
                         end: Alignment.topCenter,
                       ),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'MC Donald',
                             style: TextStyle(
                               color: kWhiteColor,
@@ -63,14 +64,18 @@ class HomeTopRatedListView extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 '45m to 50m',
                                 style: TextStyle(
                                   color: kWhiteColor,
                                   fontSize: 9,
                                 ),
                               ),
-                              _RatingWidget(),
+                              RatingWidget(
+                                height: size.height * 0.019,
+                                width: size.height * 0.043,
+                                textAndIconSized: 10,
+                              ),
                             ],
                           ),
                         ],
@@ -86,40 +91,6 @@ class HomeTopRatedListView extends StatelessWidget {
           ),
           itemCount: 10,
         ),
-      ),
-    );
-  }
-}
-
-class _RatingWidget extends StatelessWidget {
-  const _RatingWidget();
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height * 0.019,
-      width: size.height * 0.043,
-      decoration: BoxDecoration(
-        color: Colors.green,
-        borderRadius: BorderRadius.circular(2),
-      ),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            '4.1',
-            style: TextStyle(
-              fontSize: 10,
-              color: kWhiteColor,
-            ),
-          ),
-          Icon(
-            Icons.star,
-            size: 10,
-            color: kWhiteColor,
-          ),
-        ],
       ),
     );
   }
