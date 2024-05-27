@@ -28,6 +28,8 @@ class RatingWidget extends StatelessWidget {
           children: [
             Text(
               '4.1',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: textAndIconSized,
                 color: kWhiteColor,

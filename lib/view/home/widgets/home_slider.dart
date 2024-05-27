@@ -7,9 +7,9 @@ class HomeSlider extends StatelessWidget {
   });
 
   final List images = [
-    'https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?b=1&s=612x612&w=0&k=20&c=X6CkFGpSKhNZeiii8Pp2M_YrBdqs7tRaBytkGi48a0U=',
-    'https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQiDGH1SSNR_Q46Qc43yjGXDJE2O6rSihObSDeesHBdaxFs5_FP_MRAVvsX_iJrKkcJGk&usqp=CAU',
+    'https://images.freekaamaal.com/store_desc_images/1525866061.png',
+    'https://images.ctfassets.net/trvmqu12jq2l/4IcHz0l78ZGwZcXDkgXDJt/5d5050f7ae5ef2ace0c017d7f0ffe875/IDK_Meal.png?w=1200&fm=png',
+    'https://d4t7t8y8xqo0t.cloudfront.net/app/resized/1080X/pages/851/image20190304125848.jpg',
   ];
 
   @override
