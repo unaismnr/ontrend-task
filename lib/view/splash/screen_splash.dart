@@ -31,20 +31,33 @@ class _ScreenSplashState extends State<ScreenSplash> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.35,
-                width: MediaQuery.of(context).size.height * 0.35,
-                child: Image.asset(
-                  'assets/log-ontrend.png',
+        body: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 20,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const SizedBox(),
+              Center(
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.35,
+                  width: MediaQuery.of(context).size.height * 0.35,
+                  child: Image.asset(
+                    'assets/log-ontrend.png',
+                  ),
                 ),
               ),
-            ),
-            const Text('100% Safe & Secure'),
-          ],
+              const Text(
+                '100% Safe & Secure',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

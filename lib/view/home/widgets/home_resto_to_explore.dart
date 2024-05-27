@@ -179,7 +179,7 @@ class HomeRestoToExplore extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) => SizedBox(
-                  height: size.height * 0.018,
+                  height: size.height * 0.023,
                 ),
                 itemCount: snapshot.data!.length,
               );

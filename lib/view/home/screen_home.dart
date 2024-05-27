@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ontrend_task/utils/color_consts.dart';
+import 'package:ontrend_task/view/main/bottom_navigation.dart';
 
 import 'widgets/home_category_container.dart';
 import 'widgets/home_custom_appbar.dart';
@@ -20,26 +21,20 @@ class ScreenHome extends StatelessWidget {
         body: ListView(
           children: [
             const Padding(
-              padding: EdgeInsets.only(left: 4),
+              padding: EdgeInsets.only(left: 5),
               child: HomeCustomAppBar(),
             ),
-            SizedBox(
-              height: size.height * 0.015,
-            ),
+            SizedBox(height: size.height * 0.015),
             const HomeSearchBar(),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
+            SizedBox(height: size.height * 0.022),
             HomeSlider(),
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.015),
             const HomeTitles(title: 'Categories'),
             SizedBox(height: size.height * 0.015),
             HomeCategoryContainer(),
             SizedBox(height: size.height * 0.02),
             const Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -64,18 +59,21 @@ class ScreenHome extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.015),
             HomeOfferGridView(),
-            SizedBox(height: size.height * 0.015),
+            SizedBox(height: size.height * 0.02),
             const HomeTitles(title: 'Top Rated Restaurants Near You'),
             SizedBox(height: size.height * 0.015),
             HomeTopRatedListView(),
             SizedBox(height: size.height * 0.015),
             SizedBox(height: size.height * 0.015),
-            const HomeTitles(title: 'Restaurants to Explore (1288 Founds)'),
+            const HomeTitles(
+              title: 'Restaurants to Explore (1288 Founds)',
+            ),
             SizedBox(height: size.height * 0.015),
             HomeRestoToExplore(),
             SizedBox(height: size.height * 0.015),
           ],
         ),
+        bottomNavigationBar: const BottomNavigationWidget(),
       ),
     );
   }
